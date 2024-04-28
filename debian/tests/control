@@ -1,0 +1,9 @@
+Tests: pytest
+Depends: @,
+        python3-all,
+        python3-pytest,
+        python3-unidecode,
+        python3-freezegun,
+        python3-validators,
+        python3-xmltodict,
+Restrictions: allow-stderr

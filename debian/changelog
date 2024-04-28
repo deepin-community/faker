@@ -1,5 +1,101 @@
-template-repository (1.0-1) unstable; urgency=medium
+faker (24.4.0-1) unstable; urgency=medium
 
-  * Initial release
+  * Team upload.
+  * New upstream version 24.4.0
+  * Remove extraneous dependency on python3-mock
+  * Use new dh-sequence-python3
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Alexandre Detiste <tchet@debian.org>  Thu, 28 Mar 2024 01:19:10 +0100
+
+faker (22.0.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * Delete old debian/patches and add skip tests patch.
+  * New upstream version 22.0.0. (Closes: #952388)
+  * Update d/control.
+    - Set std-ver to 4.6.2.
+    - Add Rules-Requires-Root.
+    - Add dependencies on python3-dateutil and python3-pil to the
+      binary package.
+  * Update d/copyright.
+  * Set standard to 4 on d/watch.
+  * Running test with pytest and add autopkgtest
+
+ -- Bo YU <tsu.yubo@gmail.com>  Tue, 02 Jan 2024 15:10:20 +0000
+
+faker (0.9.3-2) unstable; urgency=medium
+
+  * Team upload.
+  * Add conflicts with old ruby-faker (#1011443)
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Wed, 06 Jul 2022 08:40:59 +0200
+
+faker (0.9.3-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Bump debhelper from deprecated 9 to 12.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 12 to 13.
+
+ -- Sandro Tosi <morph@debian.org>  Sun, 12 Jun 2022 21:35:15 -0400
+
+faker (0.9.3-0.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * New upstream version 0.9.3
+  * drop patches: obsolete
+  * add patch to use unidecode (not text_unidecode);
+    document in copyright file that effective license is now GPL-2+;
+    build-depend on python3-unidecode
+  * add patches to avoid modules ukpostcodeparser email_validator
+    in tests
+  * build-depend on python3-pytest python3-pytest-runner
+
+ -- Jonas Smedegaard <dr@jones.dk>  Sun, 29 Mar 2020 23:01:48 +0200
+
+faker (0.7.7-3) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Use https protocol in Format field
+  * Use debhelper-compat instead of debian/compat.
+
+  [ Andrey Rahmatullin ]
+  * Drop Python 2 support.
+
+ -- Andrey Rahmatullin <wrar@debian.org>  Fri, 16 Aug 2019 00:26:24 +0500
+
+faker (0.7.7-2) unstable; urgency=high
+
+  * Fix Non-determistically FTBFS due to tests sometimes exposing
+    UnboundLocalError. Closes: #849333.
+  * Remove century tests. Closes: #849652.
+
+ -- Brian May <bam@debian.org>  Tue, 31 Jan 2017 17:32:59 +1100
+
+faker (0.7.7-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Bump Standards-Version to 3.9.8.
+  * debian/.git-dpm: fix patchedTag format.
+  * Remove upstream applied patch 0001-Improve-command-line-output.patch.
+
+ -- Hugo Lefeuvre <hle@debian.org>  Fri, 23 Dec 2016 18:50:32 +0100
+
+faker (0.5.7-1) unstable; urgency=low
+
+  * Initial release (Closes: #814045)
+
+ -- Christopher Baines <mail@cbaines.net>  Sat, 19 Mar 2016 15:32:52 +0000

@@ -1,4 +1,25 @@
 #!/usr/bin/make -f
 
+export PYBUILD_NAME=fake-factory
+
 %:
-	dh $@
+	dh $@ --buildsystem=pybuild
+
+override_dh_installman:
+	PYTHONPATH="." help2man -n "command to generate fake data" --no-info \
+		--output=debian/faker.1 debian/faker/usr/bin/faker
+	dh_installman
+
+override_dh_auto_install:
+	dh_auto_install
+	# Move the python 3 script to the faker package
+	mkdir -p debian/faker/usr/bin
+	mv debian/python3-fake-factory/usr/bin/faker debian/faker/usr/bin/
+
+# tests needs package installed.
+# please help to fix it if can
+# see https://github.com/joke2k/faker/issues/1969
+override_dh_auto_test:
+
+execute_after_dh_auto_install:
+	dh_auto_test
