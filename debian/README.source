@@ -1,0 +1,4 @@
+The man pages were generated with the help of help2man, using the following
+commands:
+    help2man --name="Python library for generating fake data" -N --no-discard-stderr -o faker2.1 faker2
+    help2man --name="Python library for generating fake data" -N --no-discard-stderr -o faker3.1 faker3
